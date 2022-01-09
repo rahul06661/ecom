@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block main-content %}
+<div class="container">
+ <div class="row my-3">
+  <div class="col-sm-6 offset-sm-3">
+   <h3>Login</h3>
+   <hr>
+   <form action="" method="post" novalidate class="shadow p-5">
+    {% csrf_token %}
+
+    {{form}}
+
+    <input type='submit' value="Submit" class="btn btn-primary">
+
+    <div class="text-center text-primary fw-bold">
+        <small>Not Registerted ? <a href="{% url  'customerregistration' %}"> SignUp Here</a></small>
+     </div>
+    <br>
+
+
+   </form>
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
